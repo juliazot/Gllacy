@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gllacy{
+  background-color: #FEAFC3;
+  /* padding: 0 100px 0 98px; */
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
