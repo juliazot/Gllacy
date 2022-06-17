@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Gllacy</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+	<link rel="icon" type="images/png" sizes="32x32" href="img/favicon.ico">
 </head>
 
 <body class="gllacy">
@@ -16,7 +18,7 @@
         <img class="header__logo" src="img/Logo.png" width="137" height="56" alt="Логотип.">
       </a>
       <ul class="nav__list">
-        <li class="nav__item">
+        <li class="nav__item nav__item--sub">
           <a class="nav__link nav__link--active" href="catalog.html">Каталог</a>
           <ul class="nav--sub">
             <li class="sub__item sub__title">
@@ -87,6 +89,9 @@
       <li class="user__item">
         <div class="user__button cart">
           <span class="cart__title">Пусто</span>
+          <div class="empty-cart-popover">
+            <p class="h3">Ваша корзина пока пуста</p>
+          </div>
           <div class="modal__cart">
             <h2 class="modal__title">Корзина</h2>
             <ul class="cart__list">
@@ -108,7 +113,7 @@
               </li>
             </ul>
             <div class="cart__bottom">
-              <button class="modal__button modal__button--cart" type="submit">Оформить заказ</button>
+              <button class="modal__button modal__button--cart button button--pink" type="submit">Оформить заказ</button>
               <b class="cart__total">Итого: 790 ₽</b>
             </div>
           </div>
@@ -125,7 +130,7 @@
             <h2 class="slide__title">Нежный пломбир с клубничным джемом</h2>
             <p class="slide__text text">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом –
               это идеальный десерт для всей семьи.</p>
-            <button class="order__button button" type="button">Заказать</button>
+            <button class="order__button button button--white" type="button">Заказать</button>
           </div>
           <div class="slide__picture">
             <div class="image__wrapper image__wrapper--main">
@@ -191,8 +196,8 @@
       <ul class="social__main social">
         <li class="social__item">
           <a class="social__link" href="https://vk.com/htmlacademy">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
+            <svg class="social__svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="social__path" fill-rule="evenodd" clip-rule="evenodd"
                 d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM12.5884 14.9749H11.8711C11.8711 14.9749 10.2885 15.0584 8.89479 13.7867C7.37486 12.3995 6.03249 9.64702 6.03249 9.64702C6.03249 9.64702 5.95511 9.46654 6.03917 9.3793C6.13366 9.28121 6.39106 9.27493 6.39106 9.27493L8.10567 9.26508C8.10567 9.26508 8.26727 9.28878 8.38294 9.36317C8.47824 9.42457 8.53167 9.53936 8.53167 9.53936C8.53167 9.53936 8.80878 10.1536 9.17581 10.7093C9.89212 11.7942 10.2258 12.0315 10.469 11.9152C10.8233 11.7458 10.7171 10.3816 10.7171 10.3816C10.7171 10.3816 10.7236 9.88646 10.5387 9.66601C10.3955 9.4951 10.1254 9.44527 10.0062 9.43128C9.90971 9.42 10.0681 9.22367 10.2733 9.13558C10.5819 9.00308 11.1268 8.99551 11.7706 9.00136C12.2722 9.00579 12.4165 9.0332 12.6127 9.07475C13.0677 9.17105 13.0536 9.47963 13.0229 10.1454C13.0138 10.3444 13.0032 10.5752 13.0032 10.8418C13.0032 10.9018 13.0012 10.9657 12.9991 11.0315C12.9885 11.3725 12.9763 11.7629 13.2324 11.908C13.3637 11.9822 13.6849 11.9191 14.4884 10.7233C14.8693 10.1566 15.1549 9.49024 15.1549 9.49024C15.1549 9.49024 15.2173 9.37145 15.3142 9.32048C15.4134 9.26851 15.5472 9.2845 15.5472 9.2845L17.3515 9.27465C17.3515 9.27465 17.8937 9.21796 17.9815 9.43242C18.0735 9.65758 17.7788 10.1833 17.0417 11.0444C16.3463 11.8567 16.006 12.1587 16.0328 12.4236C16.0527 12.6198 16.2739 12.7957 16.7015 13.1436C17.5897 13.8661 17.8264 14.2455 17.8827 14.3357C17.8872 14.343 17.8906 14.3484 17.893 14.3519C18.2905 14.9296 17.4522 14.9749 17.4522 14.9749L15.8497 14.9944C15.8497 14.9944 15.5053 15.0543 15.0521 14.7814C14.8151 14.6388 14.5833 14.406 14.3626 14.1842C14.0251 13.8451 13.7131 13.5316 13.4469 13.6056C13.0002 13.7298 13.0143 14.5734 13.0143 14.5734C13.0143 14.5734 13.0175 14.7536 12.9157 14.8495C12.8051 14.954 12.5884 14.9749 12.5884 14.9749Z"
                 fill="#FCFCFC" />
             </svg>
@@ -231,7 +236,7 @@
           <p class="gift__text gift__text--first text">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ
             банку малинового варенья бесплатно.
           </p>
-          <button class="gift__button button" type="button">Хочу подарок</button>
+          <button class="gift__button button button--white" type="button">Хочу подарок</button>
 
         </li>
         <li class="gift__item gift__item--second">
@@ -240,7 +245,7 @@
           <p class="gift__text gift__text--second text">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных
             зефирок совершенно бесплатно.
           </p>
-          <button class="gift__button button" type="button">Хочу подарок</button>
+          <button class="gift__button button button--white" type="button">Хочу подарок</button>
 
         </li>
       </ul>
@@ -257,7 +262,7 @@
             <span class="taste__price">310 ₽/кг</span>
             <button class="taste__button">
               <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path  class="taste__path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z"
                   fill="#FCFCFC" />
               </svg>
@@ -272,7 +277,7 @@
             <b class="taste__price">340 ₽/кг</b>
             <button class="taste__button">
               <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path  class="taste__path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z"
                   fill="#FCFCFC" />
               </svg>
@@ -288,7 +293,7 @@
             <b class="taste__price">330 ₽/кг</b>
             <button class="taste__button">
               <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path class="taste__path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z"
                   fill="#FCFCFC" />
               </svg>
@@ -304,7 +309,7 @@
             <b class="taste__price">320 ₽/кг</b>
             <button class="taste__button">
               <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                <path  class="taste__path" fill-rule="evenodd" clip-rule="evenodd"
                   d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z"
                   fill="#FCFCFC" />
               </svg>
@@ -354,7 +359,7 @@
           <form class="news__form" action="https://echo.htmlacademy.ru" method="post">
             <label for="email"></label>
             <input class="email" type="email" id="email" placeholder="email@example.com" name="email" required>
-            <button class="news__button" type="submit">Отправить</button>
+            <button class="news__button button button--pink" type="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -372,7 +377,11 @@
           подтвердить заказ.</p>
         <div class="delivery__datetel">
           <form class="delivery__dateform" action="https://echo.htmlacademy.ru" method="post">
-            <label class="delivery__label" for="delivery__date">Дата</label>
+            <label class="delivery__label delivery__label--date" for="delivery__date">Дата</label>
+            <span class="delivery__tooltip">
+              <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label"></button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label">Дата</span>
+         </span>
             <input class="delivery__date" type="date" id="delivery__date" placeholder="01.04.2020" name="delivery__date"
               required>
           </form>
@@ -384,10 +393,14 @@
         </div>
         <form class="delivery__addressform" action="https://echo.htmlacademy.ru" method="post">
           <label class="delivery__label" for="delivery__address">Адрес</label>
+          <span class="delivery__tooltip delivery__tooltip--address">
+            <button class="tooltip-toggle tooltip__toggle--address" type="button" aria-labelledby="tooltip-label--address"></button>
+            <span class="tooltip-text tooltip__text--address" role="tooltip" id="tooltip-label--address">Введите название улицы, дома и квартиры</span>
+       </span>
           <input class="delivery__address" type="text" id="delivery__address" placeholder="ул. Большая Конюшенная, 19/8"
             name="delivery__address" required>
         </form>
-        <button class="delivery__button" type="submit">Отправить</button>
+        <button class="delivery__button button button--pink" type="submit">Отправить</button>
       </div>
       </div>
     </section>
@@ -398,7 +411,7 @@
         <p class="shop__text">Для заказов по телефону:</p>
         <h3 class="shop__info">+7 (812) 812-12-12</h3>
         <p class="shop__text shop__text--schedule">(с 10 до 20 ежедневно)</p>
-        <button class="shop__button" type="button">Форма обратной связи</button>
+        <button class="shop__button button button--pink" type="button">Форма обратной связи</button>
       </div>
     </section>
     <!-- <div class="feedback__modal modal">
